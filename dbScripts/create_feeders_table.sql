@@ -1,0 +1,10 @@
+create table feeders (
+	id uuid primary key,
+	pack_name VARCHAR (255),
+	pack_id VARCHAR (255),
+	pack_group VARCHAR (255),
+	pack_artifact VARCHAR (255),
+	pack_version VARCHAR (255),
+	pack_release_date int8,
+	repository VARCHAR (255)
+);
