@@ -3,3 +3,5 @@
 java -jar /home/EagleEyeBrain.jar &
 
 java -jar /home/EagleEyeWing.jar &
+
+service cron start
