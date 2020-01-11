@@ -7,8 +7,8 @@ RUN apt-get install -y apt-utils \
 	&& apt-get install -y net-tools \
 	&& apt-get install -y nano
 
-COPY target/EagleEyeBrain-v0.2.jar /home/EagleEyeBrain-v0.2.jar
+COPY EagleEyeBrain-v0.2.jar /home/EagleEyeBrain.jar
 
 WORKDIR /home
 
-CMD java -Xmx512M -Dport=$PORT -jar /home/EagleEyeBrain-v0.2.jar
+CMD java -Xmx512M -Dport=$PORT -jar /home/EagleEyeBrain.jar
