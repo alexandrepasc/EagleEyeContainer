@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+
+  api:
+    image: api-eagleeye-img
+    build:
+      context: .
+      dockerfile: heroku/api_app/Dockerfile
+    container_name: api-eagleeye
+
+  be:
+    image: be-eagleeye-img
+    build:
+      context: .
+      dockerfile: heroku/be_app/Dockerfile
+    container_name: be-eagleeye
