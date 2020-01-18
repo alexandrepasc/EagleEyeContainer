@@ -1,0 +1,37 @@
+FROM adoptopenjdk/openjdk11
+
+RUN apt-get update --fix-missing
+
+RUN apt-get install -y apt-utils \
+    && apt-get install -y postgresql-client \
+    && apt-get install -y net-tools \
+    && apt-get install -y cron \
+    && apt-get install -y nano
+
+COPY scripts/runEar.sh /home/runEar.sh
+
+RUN chmod +x /home/runEar.sh
+
+COPY scripts/runBe.sh /home/runBe.sh
+
+RUN chmod +x /home/runBe.sh
+
+COPY EagleEyeBrain-v0.2.jar /home/EagleEyeBrain.jar
+
+COPY EagleEyeEar-v0.7.jar /home/EagleEyeEar.jar
+
+COPY EagleEyeWing-v0.1.jar /home/EagleEyeWing.jar
+
+RUN export EDITOR=/bin/nano
+
+COPY scripts/ear-cron /etc/cron.d/ear-cron
+
+RUN mkdir /home/logs
+
+RUN crontab /etc/cron.d/ear-cron
+
+RUN update-rc.d cron defaults
+
+RUN ln -s /etc/init.d/cron /etc/rc1.d/S01cron
+
+WORKDIR /home
