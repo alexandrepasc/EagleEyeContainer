@@ -6,7 +6,7 @@ RUN apt-get install -y apt-utils \
     && apt-get install -y net-tools \
     && apt-get install -y nano
 
-COPY EagleEyeEar-v0.7.jar /home/EagleEyeEar.jar
+COPY EagleEyeEar-v0.9.1.jar /home/EagleEyeEar.jar
 
 COPY EagleEyeWing-v0.3.jar /home/EagleEyeWing.jar
 
