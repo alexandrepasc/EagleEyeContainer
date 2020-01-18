@@ -8,7 +8,7 @@ RUN apt-get install -y apt-utils \
 
 COPY EagleEyeEar-v0.7.jar /home/EagleEyeEar.jar
 
-COPY EagleEyeWing-v0.1.jar /home/EagleEyeWing.jar
+COPY EagleEyeWing-v0.3.jar /home/EagleEyeWing.jar
 
 RUN mkdir /home/logs
 
