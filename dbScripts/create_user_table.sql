@@ -5,5 +5,6 @@ create table users (
 	last_name VARCHAR (255),
 	email VARCHAR (255),
 	password VARCHAR (255),
-	devices VARCHAR (1400)
+	devices VARCHAR (1400),
+	cookies boolean DEFAULT null
 );
