@@ -7,7 +7,7 @@ RUN apt-get install -y apt-utils \
 	&& apt-get install -y net-tools \
 	&& apt-get install -y nano
 
-COPY EagleEyeBrain-v0.5.jar /home/EagleEyeBrain.jar
+COPY EagleEyeBrain*.jar /home/EagleEyeBrain.jar
 
 WORKDIR /home
 
