@@ -6,9 +6,9 @@ RUN apt-get install -y apt-utils \
     && apt-get install -y net-tools \
     && apt-get install -y nano
 
-COPY EagleEyeEar-v0.9.1.jar /home/EagleEyeEar.jar
+COPY EagleEyeEar*.jar /home/EagleEyeEar.jar
 
-COPY EagleEyeWing-v0.4.jar /home/EagleEyeWing.jar
+COPY EagleEyeWing*.jar /home/EagleEyeWing.jar
 
 RUN mkdir /home/logs
 
