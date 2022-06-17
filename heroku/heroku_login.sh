@@ -1,5 +1,5 @@
 #!/bin/bash
 
-heroku login
+heroku login -i
 
 heroku container:login
